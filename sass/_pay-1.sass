@@ -1,0 +1,225 @@
+.order-point
+    padding: 67px 0 46px
+
+    &__container
+        display: flex
+        max-width: 725px
+        margin: 0 auto
+        align-items: center
+        gap: 24px
+        @media (max-width: 580.98px)
+            justify-content: center
+            flex-wrap: wrap
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 13px
+        &_active
+            .order-point__img
+                svg
+                    path
+                        fill: #D84727
+
+            .order-point__status
+                font-weight: 600
+                color: #D84727
+
+    &__img
+        width: 48px
+        height: 48px
+        svg
+            path
+                fill: #999999
+
+    &__status
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.02em
+        color: #999999
+        white-space: nowrap
+
+    &__line
+        max-width: 144px
+        width: 100%
+        height: 1px
+        background: #333333
+        transform: translateY(30px)
+        @media (max-width: 580.98px)
+            display: none
+
+.order-block
+    padding: 10px 0 59px
+
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        @media (max-width: 978.98px)
+            grid-template-columns: 1fr
+
+    &__detail-order
+        background: #FFFFFF
+        padding: 32px 39px 44px 32px
+        align-self: start
+
+    &__title
+        font-weight: 600
+        font-size: 36px
+        line-height: 48px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 41px
+
+    &__wrapper-detain
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 55px
+        padding-bottom: 9px
+        border-bottom: 1px solid #333333
+        margin-bottom: 24px
+        @media (max-width: 502.98px)
+            column-gap: 15px
+        @media (max-width: 450.98px)
+            grid-template-columns: 1fr
+
+    &__item-text
+        font-weight: 500
+        font-size: 24px
+        line-height: 26px
+        letter-spacing: 0.03em
+        color: #333333
+        margin-bottom: 30px
+
+    &__total-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media (max-width: 480.98px)
+            column-gap: 24px
+
+    &__total
+        font-weight: 500
+        font-size: 24px
+        line-height: 26px
+        letter-spacing: 0.03em
+        color: #333333
+        @media (max-width: 480.98px)
+            font-size: 20px
+
+    &__total-price
+        font-weight: 500
+        font-size: 36px
+        line-height: 38px
+        letter-spacing: 0.03em
+        color: #333333
+        @media (max-width: 480.98px)
+            font-size: 28px
+
+    &__billing-address
+        padding: 32px 32px 51px 32px
+        background: #FFFFFF
+        @media (max-width: 502.98px)
+            padding: 32px 15px 24px 15px
+
+    &__title
+
+    &__wrapper-address
+        display: flex
+        flex-direction: column
+
+    &__address-label
+        font-weight: 400
+        font-size: 16px
+        line-height: 32px
+        letter-spacing: 0.03em
+        color: #000000
+
+    &__address-input
+        width: 100%
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: #333333
+        margin-bottom: 24px
+        border: none
+        border-bottom: 1px solid #333333
+        height: 48px
+        outline: none
+        font-family: "Taviraj",serif
+        &:placeholder
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0.03em
+            color: #999999
+        @media (max-width: 450.98px)
+            font-size: 17px
+            line-height: 21px
+            height: 40px
+
+    &__code-wrapper
+        display: flex
+        gap: 24px
+        @media (max-width: 978.98px)
+            flex-direction: column
+            gap: 0
+
+    &__code-city
+        display: flex
+        flex-direction: column
+        flex: 1 0 238px
+        @media (max-width: 978.98px)
+            flex: 1 0 auto
+
+    &__code-zip
+        display: flex
+        flex-direction: column
+        flex: 0 1 214px
+        @media (max-width: 978.98px)
+            flex: 1 0 auto
+
+    &__btns-block
+        grid-column: 2/3
+        margin-top: 10px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+        @media (max-width: 978.98px)
+            grid-column: 1/2
+        @media (max-width: 550.98px)
+            gap: 10px
+        @media (max-width: 450.98px)
+            grid-template-columns: 1fr
+            gap: 25px
+
+    &__continue
+        font-family: "Taviraj", serif
+        height: 61px
+        border: 1px solid #D84727
+        font-weight: 500
+        font-size: 20px
+        line-height: 32px
+        letter-spacing: 0.03em
+        color: #D84727
+        background: transparent
+        transition: all 0.3s
+        &:hover
+            background: #DA5E42
+            color: #fff
+
+    &__order
+        font-family: "Taviraj", serif
+        height: 61px
+        background: #D84727
+        font-weight: 500
+        font-size: 20px
+        line-height: 32px
+        letter-spacing: 0.03em
+        color: #FFFFFF
+        transition: all 0.3s
+        &:hover
+            background: #DA5E42

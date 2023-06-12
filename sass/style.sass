@@ -1,0 +1,742 @@
+@import "fonts"
+@import "null"
+@import "bem-block"
+@import "select-style"
+@import "header"
+@import "footer"
+@import "product"
+@import "pop-up"
+@import "pay-1"
+@import "pay-2"
+@import "pay-3"
+
+/* ===============================================================brands */
+
+.brands
+    padding: 40px 0 25px
+    background: #DA5E42
+
+    &__container
+        display: flex
+        justify-content: space-between
+        column-gap: 100px
+        row-gap: 10px
+        flex-wrap: wrap
+        padding: 0 100px
+        @media (max-width: 699.98px)
+            column-gap: 40px
+            padding: 0 40px
+        @media (max-width: 459.98px)
+            justify-content: space-evenly
+
+    &__img
+        width: 100px
+        height: 100px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+/* ===============================================================brands */
+.instagram
+    padding: 45px 0 75px
+    @media (max-width: 1139.98px)
+        padding: 10px 0 35px
+
+    &__container
+
+    &__title
+        margin-bottom: 40px
+
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        @media (max-width: 1139.98px)
+            justify-content: center
+            gap: 20px
+
+    &__img
+        flex: 0 0 222px
+        height: 222px
+        overflow: hidden
+        @media (max-width: 473.98px)
+            flex: 0 0 100%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: transform 0.3s
+            &:hover
+                transform: scale(1.1)
+
+/* ===============================================================testimonials */
+.testimonials
+    padding: 100px 0 100px
+    @media (max-width: 544.98px)
+        padding: 55px 0 30px
+
+    &__container
+
+    &__title
+        margin-bottom: 12px
+        transform: translateX(50%)
+        position: relative
+        z-index: 10
+        @media (max-width: 544.98px)
+            transform: translateX(20%)
+
+.testimonials-slider
+    position: relative
+    z-index: 7
+    &::before
+        content: ''
+        position: absolute
+        display: block
+        width: 515px
+        height: 300px
+        background: #F1DDC9
+        top: -100px
+        left: -100px
+        z-index: -5
+        @media (max-width: 776.98px)
+            width: 315px
+        @media (max-width: 544.98px)
+            top: -65px
+    &::after
+        content: ''
+        position: absolute
+        display: block
+        width: 441px
+        height: 351px
+        background: url('../img/testem/decor.svg') no-repeat
+        top: -196px
+        left: -224px
+        z-index: -5
+        @media (max-width: 544.98px)
+            top: -194px
+
+    &__item
+        padding: 5px
+        max-width: 1110px
+        display: grid
+        grid-template-columns: 511px 1fr
+        gap: 88px
+        position: relative
+        z-index: 4
+        @media (max-width: 898.98px)
+            gap: 25px
+        @media (max-width: 776.98px)
+            grid-template-columns: 311px 1fr
+        @media (max-width: 544.98px)
+            grid-template-columns: 1fr
+
+    &__img
+        max-width: 100%
+        height: 320px
+        position: relative
+        z-index: 9
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__info
+        align-self: end
+        margin-bottom: 47px
+
+    &__title
+        font-weight: 500
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.03em
+        color: #333333
+
+    &__descr
+        font-weight: 300
+        font-size: 16px
+        line-height: 32px
+        letter-spacing: 0.03em
+        color: #777777
+
+.testimonials-slider .slick-prev
+    position: absolute
+    bottom: -50px
+    left: 10px
+    font-size: 0
+    border: none
+    background-color: transparent
+    background: url('../img/testem/arrow-left-solid.svg') no-repeat
+    min-width: 34px
+    height: 24px
+    transition: transform 0.3s
+    &:hover
+        transform: scale(1.1)
+    @media (max-width: 544.98px)
+        bottom: 0px
+
+.testimonials-slider .slick-next
+    position: absolute
+    bottom: -50px
+    left: 60px
+    font-size: 0
+    border: none
+    background-color: transparent
+    background: url('../img/testem/arrow-right-solid.svg') no-repeat
+    width: 34px
+    height: 24px
+    transition: transform 0.3s
+    &:hover
+        transform: scale(1.1)
+    @media (max-width: 544.98px)
+        bottom: 0px
+
+/* ===============================================================testimonials */
+
+.product
+    padding: 30px 0 50px
+
+    &__prod-wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 15px
+        margin-bottom: 55px
+        @media (max-width: 1076.98px)
+            grid-template-columns: 1fr 1fr
+            row-gap: 50px
+        @media (max-width: 732.98px)
+            grid-template-columns: 1fr
+
+    &__block
+
+    &__title
+        margin-bottom: 60px
+
+    &__wrapper
+        display: flex
+        flex-direction: column
+        gap: 32px
+
+    &__item
+        display: flex
+        gap: 24px
+        @media (max-width: 732.98px)
+            padding-left: 50px
+        @media (max-width: 502.98px)
+            padding-left: 0
+
+        &:hover
+            transition: all 0.3s
+            .product__img
+                border-radius: 15px
+                transition: all 0.3s
+                background: #DA5E42
+                img
+                    transition: all 0.3s
+                    transform: scale(1.1)
+
+    &__img
+        flex: 0 0 131px
+        height: 131px
+        background: #F1DDC9
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 15px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__info
+
+    &__name
+        margin-bottom: 10px
+        a
+            font-weight: 400
+            font-size: 24px
+            line-height: 34px
+            letter-spacing: 0.02em
+            color: #333333
+            @media (max-width: 450.98px)
+                font-size: 21px
+                line-height: 30px
+
+    &__old-price
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: #777777
+        position: relative
+        display: inline-block
+        padding: 0 5px
+
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            height: 1px
+            width: 100%
+            top: 50%
+            left: 0
+            background: #D93F3F
+
+    &__price
+        font-weight: 500
+        font-size: 24px
+        line-height: 40px
+        letter-spacing: 0.02em
+        color: #222222
+        span
+            padding-left: 5px
+        @media (max-width: 450.98px)
+            font-size: 20px
+            line-height: 34px
+
+    &__btn
+        margin: 0 auto
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 300px
+            height: 1px
+            width: 390px
+            background: #999999
+
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            right: 300px
+            height: 1px
+            width: 390px
+            background: #999999
+
+/* ===============================================================news */
+
+.news
+    padding: 50px 0 50px
+
+    &__title
+        margin-bottom: 50px
+
+    &__wrapper
+        display: grid
+        grid-template-columns: 350px 1fr
+        gap: 65px
+        @media (max-width: 892.98px)
+            grid-template-columns: 1fr
+            gap: 30px
+
+    &__info
+        align-self: center
+
+    &__sub-title
+        font-weight: 400
+        font-size: 20px
+        line-height: 40px
+        letter-spacing: 0.02em
+        color: #777777
+        margin-bottom: 8px
+        @media (max-width: 892.98px)
+            text-align: center
+
+    &__title-news
+        margin-bottom: 45px
+        @media (max-width: 892.98px)
+            text-align: center
+        a
+            font-weight: 400
+            font-size: 36px
+            line-height: 48px
+            letter-spacing: 0.02em
+            color: #333333
+
+    &__img
+        max-width: 610px
+        height: 484px
+        position: relative
+        z-index: 5
+        overflow: hidden
+        @media (max-width: 892.98px)
+            margin: 0 auto
+        @media (max-width: 500.98px)
+            height: 345px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: all 0.3s
+            &:hover
+                transform: scale(1.06)
+
+        &::before
+            content: ''
+            position: absolute
+            top: -70px
+            left: 250px
+            width: 100%
+            height: 100%
+            display: block
+            background: #F1DDC9
+            z-index: -5
+
+        &::after
+            content: ''
+            position: absolute
+            top: -81px
+            left: 122px
+            width: 768px
+            height: 690px
+            display: block
+            background: url('../img/news/decor.svg')
+            z-index: -5
+
+    &__btn
+        @media (max-width: 892.98px)
+            margin: 0 auto
+/* ===============================================================news */
+
+.monthly-deals
+    padding: 40px 0 50px
+    @media (max-width: 1200px)
+        padding: 40px 0 85px
+
+    &__container
+
+    &__title
+        margin-bottom: 95px
+
+    &__wrapper
+        display: flex
+        gap: 30px
+        flex-wrap: wrap
+        row-gap: 140px
+        justify-content: center
+
+.deals-item
+    max-width: 255px
+    min-height: 351px
+    background: #FFFFFF
+    padding: 0 24px 20px 24px
+    position: relative
+    transition: all 1s
+    @media (max-width: 549.98px)
+        max-width: none
+        width: 100%
+
+    &__img
+        margin-top: -40px
+        width: 207px
+        height: 221px
+        background: #FFFFFF
+        margin-bottom: 32px
+        transition: all 0.3s
+        @media (max-width: 549.98px)
+            width: 100%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: containe
+            @media (max-width: 549.98px)
+                object-fit: cover
+
+    &__name
+        margin-bottom: 2px
+        max-height: 64px
+        overflow: hidden
+        a
+            font-weight: 500
+            font-size: 24px
+            line-height: 32px
+            color: #333333
+
+    &__sale
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: #777777
+        margin-bottom: 6px
+
+    &__old-price
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: #777777
+        position: relative
+        padding: 0 4px
+        display: inline-block
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 0
+            height: 1px
+            width: 100%
+            background: #D93F3F
+
+    &__price
+        font-weight: 400
+        font-size: 24px
+        line-height: 32px
+        color: #333333
+
+    &__btns-block
+        position: absolute
+        left: 0
+        top: 100%
+        width: 100%
+        min-height: 50px
+        background: #FFFFFF
+        opacity: 0
+        transition: all 0.3s
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 20px 24px
+
+    &:hover
+        .deals-item__btns-block
+            transition: all 0.3s
+            opacity: 1
+
+        .deals-item__img
+            transform: scale(1.1)
+
+    &__like
+        width: 39px
+        height: 39px
+        border: 1px solid #D84727
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        transition: all 0.3s
+        &:hover
+            background: #F1DDC9
+            border-radius: 5px
+        img
+            width: 24px
+            height: 24px
+
+        &_click
+            background: #F1DDC9
+            border-radius: 5px
+
+    &__btn
+
+    @media screen and (max-width: 1200px)
+        .deals-item__btns-block
+            opacity: 1
+            margin-bottom: 50px
+/* ===============================================================news */
+.discover
+    padding: 50px 0 20px
+
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        @media (max-width: 805px)
+            grid-template-columns: 1fr
+
+.discover-item
+    min-height: 270px
+    background: #fff
+    padding: 32px 8px 8px 32px
+
+    &__name
+        margin-bottom: 8px
+        a
+            font-family: 'Taviraj', serif
+            font-weight: 400
+            font-size: 28px
+            line-height: 32px
+            letter-spacing: 0.03em
+            color: #333333
+
+    &__descr
+        font-family: 'Nunito', sans-serif
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: #777777
+        margin-bottom: 4px
+        max-width: 345px
+        @media (max-width: 805px)
+            max-width: 450px
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        gap: 5px
+
+    &__link
+        font-family: 'Taviraj', serif
+        font-weight: 600
+        font-size: 16px
+        line-height: 27px
+        letter-spacing: 0.03em
+        color: #333333
+        border-bottom: 1px solid #333333
+        display: inline-block
+        transition: all 0.3s
+        white-space: nowrap
+        &:hover
+            color: #D84727
+            border-bottom: 1px solid #D84727
+
+    &__img
+        display: flex
+        height: 143px
+        flex: 0 1 330px
+        justify-content: flex-end
+        img
+            max-width: 100%
+            height: 100%
+            object-fit: containe
+/* ===============================================================news */
+.main-block
+    padding: 55px 0 30px
+
+    &__container
+
+.main-slider
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        display: block
+        top: -110px
+        right: -227px
+        background: url('../img/main/decor.svg') no-repeat
+        height: 507px
+        width: 790px
+        z-index: 6
+    &::after
+        content: ''
+        position: absolute
+        display: block
+        background: #F1DDC9
+        width: 100%
+        min-height: 505px
+        top: 0
+        left: 0
+        z-index: 4
+        @media (max-width: 1037.98px)
+            min-height: 100%
+
+    .slick-list
+        padding-bottom: 70px
+        margin: 0 3px
+        position: relative
+        z-index: 9
+        @media (max-width: 1037.98px)
+            padding-bottom: 20px
+
+    .slick-next
+        position: absolute
+        bottom: 85px
+        right: 32px
+        z-index: 10
+        border: none
+        font-size: 0
+        background: url('../img/icons/arrow.svg')
+        width: 60px
+        height: 60px
+        transform: rotate(180deg)
+        @media (max-width: 1037.98px)
+            bottom: -30px
+
+    .slick-prev
+        position: absolute
+        bottom: 85px
+        right: 110px
+        z-index: 10
+        border: none
+        font-size: 0
+        background: url('../img/icons/arrow.svg')
+        width: 60px
+        height: 60px
+        @media (max-width: 1037.98px)
+            bottom: -30px
+
+    &__item-slide
+        display: grid
+        grid-template-columns: 325px 1fr
+        gap: 47px
+        padding: 56px 50px 50px 20px
+        @media (max-width: 1037.98px)
+            grid-template-columns: 1fr
+            padding: 30px 20px
+        @media (max-width: 410.98px)
+            padding: 20px 5px
+
+    &__img
+        height: 443px
+        width: 286px
+        @media (max-width: 1037.98px)
+            justify-self: center
+        @media (max-width: 410.98px)
+            width: 100%
+            max-width: 286px
+
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            transform: translateY(85px)
+            @media (max-width: 1037.98px)
+                transform: translateY(0)
+                @media (max-width: 410.98px)
+                    object-fit: contain
+
+    &__info
+        position: relative
+        z-index: 10
+
+    &__title
+        margin-bottom: 35px
+        @media (max-width: 410.98px)
+            font-size: 45px
+            line-height: 56px
+
+    &__descr
+        font-family: 'Nunito'
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        letter-spacing: 0.03em
+        color: #333333
+        margin-bottom: 10px
+        max-width: 570px
+        max-height: 66px
+        overflow: hidden
+        @media (max-width: 1037.98px)
+            max-width: 100%
+
+    &__link
+        margin-bottom: 59px
+        @media (max-width: 373.98px)
+            margin-bottom: 25px
+        a
+            font-weight: 600
+            font-size: 16px
+            line-height: 32px
+            letter-spacing: 0.03em
+            color: #333333
+            border-bottom: 1px solid #333333
+
+    &__btn-block
+        display: flex
+        gap: 16px
+        flex-wrap: wrap

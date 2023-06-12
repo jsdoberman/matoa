@@ -1,0 +1,548 @@
+/* ================================== breadcrumb*/
+.breadcrumb
+    padding: 33px 0
+    @media (max-width: 767.98px)
+        margin-top: 66px
+        padding: 17px 0
+
+    &__container
+
+    &__block
+        display: flex
+        overflow: auto
+        white-space: nowrap
+        align-items: center
+        height: 30px
+
+    &__item
+        margin-right: 15px
+
+    &__item:last-child::after
+        display: none
+
+    &__link
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: 0.02em
+        color: #333333
+        position: relative
+        &::after
+            content: '/'
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            position: absolute
+            display: block
+            width: 0
+            height: 0
+            top: 5px
+            right: -6px
+
+        &:hover
+            color: #999999
+
+    &__item:last-child &__link
+        color: #D84727
+    &__item:last-child &__link::after
+        display: none
+
+/* ================================== main-product-block*/  
+.main-product-block
+    padding: 5px 0 50px
+
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+        @media (max-width: 1139.98px)
+            grid-template-columns: 1fr
+
+    &__info
+        @media (max-width: 1139.98px)
+            padding: 0 32px
+
+    &__name
+        font-weight: 400
+        font-size: 60px
+        line-height: 80px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 8px
+        @media (max-width: 544px)
+            font-size: 51px
+            line-height: 63px
+        @media (max-width: 432px)
+            font-size: 42px
+            line-height: 54px
+
+    &__old-price
+        font-weight: 400
+        font-size: 20px
+        line-height: 28px
+        letter-spacing: 0.02em
+        color: #777777
+        padding: 0 3px
+        position: relative
+        display: inline-block
+        margin-bottom: 3px
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 0
+            height: 1px
+            width: 100%
+            background: #D93F3F
+
+    &__price
+        font-weight: 500
+        font-size: 24px
+        line-height: 41px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 16px
+
+    &__model-title
+        font-weight: 600
+        font-size: 16px
+        line-height: 27px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 9px
+
+    &__choose-form
+        margin-bottom: 40px
+        display: flex
+
+    &__input-choose-form
+        opacity: 0
+        &:checked + .main-product-block__label
+            opacity: 1
+
+    &__label
+        position: relative
+        transform: translateX(-20px)
+        flex: 0 0 55px
+        height: 55px
+        display: block
+        border-radius: 100%
+        opacity: 0.5
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+        &:checked
+            opacity: 1
+
+    &__btns
+        display: flex
+        gap: 25px
+        flex-wrap: wrap
+
+    &__count
+
+    &__img //------------------------Блок слайдера
+        position: relative
+        display: grid
+        grid-template-columns: auto auto
+        gap: 10px
+        @media (max-width: 1139.98px)
+            grid-template-columns: 250px auto
+            gap: 30px
+        @media (max-width: 649.98px)
+            grid-template-columns: 250px auto
+            gap: 10px
+        @media (max-width: 633.98px)
+            grid-template-columns: 1fr
+
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            top: 0
+            left: -23%
+            width: 100%
+            height: 100%
+            background: #F1DDC9
+            @media (max-width: 1139.98px)
+                left: 0
+
+.product-slider-nav
+    .slick-current
+        opacity: 1
+
+    .slick-active
+        opacity: 0.5
+
+    .slick-current.slick-active
+        opacity: 1
+    @media (max-width: 633.98px)
+        width: 555px
+        margin: 4px auto
+
+    @media (max-width: 572.98px)
+        width: 450px
+    @media (max-width: 461.98px)
+        width: 310px
+
+    &__item
+        height: 110px
+        width: 107px
+        margin: 12px auto
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+        @media (max-width: 580px)
+            height: 80px
+            margin: 0 12px
+
+/* ---------------------------------- */
+.product-slider
+    width: 352px
+    height: 520px
+    align-self: center
+    @media (max-width: 633.98px)
+        justify-self: center
+        grid-row: 1/2
+        width: 310px
+        height: 430px
+
+    &__img-wrapper
+        height: 520px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+        @media (max-width: 633.98px)
+            height: 430px
+
+/* ---------------------------------- */
+/* .product-slider-nav
+ width: 191px
+ @media (max-width: 589.98px)
+ width: 100%
+
+    .slick-active
+        opacity: 0.6
+
+    .slick-current
+        opacity: 1
+
+    &__item
+        width: 191px
+        height: 110px
+        margin: 8px 0
+        @media (max-width: 589.98px)
+            width: 110px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain */
+
+/* ---------------------------------- */
+.count-product
+    display: flex
+    align-items: center
+
+    &__btn-minus
+        width: 30px
+        height: 30px
+        border: 1px solid #777777
+        position: relative
+        z-index: 2
+        cursor: pointer
+        transition: all 0.3s
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 50%
+            transform: translateX(-50%)
+            height: 1px
+            width: 16px
+            z-index: 3
+            background: #777777
+        &:hover
+            background: #D84727
+
+        &:hover::after
+            background: #fff
+
+    &__number
+        font-weight: 400
+        font-size: 36px
+        line-height: 61px
+        letter-spacing: 0.02em
+        color: #000000
+        margin: 0 16px
+
+    &__btn-plus
+        cursor: pointer
+        width: 30px
+        height: 30px
+        border: 1px solid #777777
+        position: relative
+        z-index: 2
+        transition: all 0.3s
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 50%
+            transform: translateX(-50%)
+            height: 1px
+            width: 16px
+            z-index: 3
+            background: #777777
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 16px
+            width: 1px
+            z-index: 3
+            background: #777777
+        &:hover
+            background: #D84727
+
+        &:hover::after
+            background: #fff
+        &:hover::before
+            background: #fff
+
+/* ================================== product-info-block*/
+
+.product-info-block
+    padding: 26px 0 25px
+
+    &__text-block
+        font-family: 'Nunito'
+        font-weight: 400
+        letter-spacing: 0.02em
+        display: none
+        padding: 25px 32px
+
+        h2
+            font-size: 24px
+            line-height: 32px
+            color: #333333
+
+        h3
+            font-size: 20px
+            line-height: 28px
+            color: #333333
+
+        p
+            font-size: 16px
+            line-height: 28px
+            color: #555555
+            margin: 8px 0
+
+        img
+            max-width: 100%
+            display: block
+
+    &__text-block_active
+        display: block
+
+.block-tabs
+    display: flex
+    flex-wrap: wrap
+    column-gap: 40px
+    padding: 0 32px
+    padding-bottom: 16px
+    border-bottom: 1px solid #999999
+
+    &__item
+        font-weight: 600
+        font-size: 20px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #999999
+        position: relative
+        transition: all 0.3s
+        cursor: pointer
+        &:hover
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 100%
+                height: 1px
+                background: #999999
+                display: block
+
+    &__item_active
+        color: #D84727
+
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 1px
+            background: #D84727
+            display: block
+        &:hover
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 100%
+                height: 1px
+                background: #D84727
+                display: block
+
+/* ==================================relate-products*/
+
+.relate-products
+    padding: 80px 0
+
+    &__container
+
+    &__title
+        margin-bottom: 65px
+
+    &__wrapper
+        position: relative
+        .slick-next
+            position: absolute
+            top: -65px
+            right: 32px
+            z-index: 10
+            border: none
+            font-size: 0
+            background: url('../img/icons/arrow.svg')
+            width: 60px
+            height: 60px
+            transform: rotate(180deg)
+        @media (max-width: 1037.98px)
+            bottom: -30px
+
+    .slick-prev
+        position: absolute
+        top: -65px
+        right: 110px
+        z-index: 10
+        border: none
+        font-size: 0
+        background: url('../img/icons/arrow.svg')
+        width: 60px
+        height: 60px
+        @media (max-width: 1037.98px)
+            bottom: -30px
+
+.relate-item
+    margin: 24px auto
+    width: 255px
+    min-height: 438px
+    background: #FFFFFF
+    position: relative
+    padding: 46px 24px 24px 24px
+    transition: all 0.3s
+    &:hover
+        box-shadow: 0px 0px 16px 1px grey
+        .relate-item__img
+            transform: scale(1.1)
+
+            img
+                border-radius: 10px
+
+    &__label
+        position: absolute
+        top: -18px
+        right: 24px
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        gap: 5px
+
+    &__sale
+        width: 103px
+        height: 34px
+        background: #D84727
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        color: #FFFFFF
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__new-product
+        width: 71px
+        height: 34px
+        background: #01522D
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        color: #FFFFFF
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__img
+        width: 207px
+        height: 221px
+        display: block
+        margin-bottom: 12px
+        overflow: hidden
+        transition: all 0.3s
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            transition: all 0.3s
+
+    &__name
+        margin-bottom: 12px
+        height: 64px
+        overflow: hidden
+
+        a
+            font-weight: 500
+            font-size: 24px
+            line-height: 32px
+            color: #333333
+
+    &__old-price
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: #777777
+        padding: 0 3px
+        position: relative
+        display: inline-block
+        span
+            margin-left: 4px
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            display: block
+            height: 1px
+            width: 100%
+            background: #D93F3F
+
+    &__price
+        font-weight: 400
+        font-size: 24px
+        line-height: 32px
+        color: #333333
+        span
+            margin-left: 4px

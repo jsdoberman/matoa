@@ -1,0 +1,217 @@
+/* ======================================header */
+.header
+    padding: 30px 0
+    position: relative
+    z-index: 60
+
+    @media (max-width: $mobile)
+        position: fixed
+        padding: 10px 0
+        width: 100%
+        background: #DA5E42
+        z-index: 100
+
+    &__container
+        display: flex
+        align-items: center
+        column-gap: 52px
+        @media (max-width: 1113px)
+            column-gap: 65px
+        @media (max-width: 371.98px)
+            column-gap: 20px
+
+    &__logo
+        position: relative
+        z-index: 100
+        height: 22px
+        flex: 0 0 178px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        @media (max-width: 527.98px) //Скриваємо частину логотипа
+            overflow: hidden
+            flex: 0 0 28px
+            img
+                width: 178px
+
+    &__menu
+        flex: 1 1 auto
+
+    &__info-block
+        flex: 1 1 245px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        gap: 25px
+        @media (max-width: $mobile)
+            margin-right: 75px
+        @media (max-width: 527.98px)
+            justify-content: center
+
+    &__search
+        width: 32px
+        height: 32px
+        position: relative
+        img
+            cursor: pointer
+
+    &__input-form
+        position: absolute
+        z-index: -3
+        left: -30px
+        bottom: -65px
+        height: 47px
+        padding: 0 10px
+        width: 234px
+        background: #D84727
+        border-radius: 5px
+        align-items: center
+        justify-content: space-between
+        display: flex
+        transform: translateY(-40px)
+        transition: all 0.3s
+        visibility: hidden
+        opacity: 0
+
+        input
+            height: 20px
+            width: 180px
+            border: none
+            font-family: 'Nunito'
+            font-weight: 400
+            font-size: 14px
+            line-height: 20px
+            letter-spacing: 0.03em
+            color: #333333
+            padding: 0 3px
+            border-radius: 2px
+    &__input-form_active
+        visibility: visible
+        opacity: 1
+        transform: translateY(0)
+
+    &__close-search
+        cursor: pointer
+        transition: all 0.5s
+        position: relative
+        z-index: 2
+        width: 20px
+        height: 20px
+
+        &:hover
+            transform: rotate(90deg)
+        span
+            position: absolute
+            top: 50%
+            left: 0
+            display: block
+            width: 20px
+            height: 2px
+            background: #fff
+            &:nth-child(1)
+                transform: rotate(45deg)
+            &:nth-child(2)
+                transform: rotate(-45deg)
+
+    &__log
+        position: relative
+        padding-right: 60px
+        display: block
+        cursor: pointer
+
+        &::after
+            content: 'Log In'
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            font-weight: 400
+            font-size: 18px
+            line-height: 31px
+            letter-spacing: 0.02em
+            color: #333333
+
+    &__bag
+        flex: 0 0 46px
+        height: 46px
+        border-radius: 100%
+        background: #F1DDC9
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: background 0.3s
+        &:hover
+            background: $main-color
+        img
+            width: 17px
+            height: 24px
+
+/* ======================================main-menu */
+
+.main-menu
+    @media (max-width: $mobile) //Скрываем блок для моба
+        position: absolute
+        left: -100%
+        top: 66px
+        width: 100%
+        height: 100vh
+        background: #F1DDC9
+        z-index: 55
+        transition: all 0.3s
+        padding: 35px 0 72px
+
+    &__block
+        display: flex
+        justify-content: flex-end
+        flex-wrap: wrap
+
+        @media (max-width: 1110px)
+            justify-content: center
+
+        @media (max-width: $mobile)
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            flex-wrap: nowrap
+            height: 100%
+            overflow: auto
+
+    &__item
+        margin-right: 50px
+        &:last-child
+            margin-right: 0
+        @media (max-width: 767.98px)
+            margin-right: 0
+
+    &__link
+        position: relative
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.7
+        letter-spacing: 0.02em
+        color: #333333
+        @media (max-width: $mobile)
+            font-size: 22px
+            line-height: 2
+
+        &::after            //Стили при наведені на елемент меню
+            content: ''
+            display: block
+            position: absolute
+            bottom: 3px
+            left: 0
+            bottom: 0
+            height: 3px
+            width: 0
+            background: $main-color
+            transition: all 0.3s
+
+        &:hover::after
+            width: calc( 100% + 10px )
+
+        &_active            //Клас активності елемента меню
+            color: $main-color
+
+.main-menu__link_active //КЛАСС АКТИВНОСТИ ЭЛЕМЕНТА МЕНЮ  main-menu__link_active
+    left: 0

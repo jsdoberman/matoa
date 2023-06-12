@@ -1,0 +1,197 @@
+.confirmation-info
+    margin-bottom: 86px
+
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        @media (max-width: 1123.98px)
+            grid-template-columns: 1fr
+
+    &__order-block
+        background: #fff
+        padding: 60px 86px 42px 86px
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        @media (max-width: 550.98px)
+            padding: 60px 26px 42px 26px
+        @media (max-width: 420.98px)
+            padding: 20px 26px 42px 26px
+
+    &__img
+        max-width: 367px
+        height: 241px
+        margin-bottom: 40px
+        @media (max-width: 420.98px)
+            height: 190px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__title
+        font-weight: 500
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 16px
+
+    &__descr
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        text-align: center
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 40px
+
+    &__btn
+        max-width: 367px
+        width: 100%
+        height: 68px
+        background: #D84727
+        font-weight: 500
+        font-size: 20px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #FFFFFF
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.3s
+        &:hover
+            background: transparent
+            color: #D84727
+            border: 1px solid #D84727
+
+    &__total-block
+
+.total-item
+    background: #FFFFFF
+    padding: 32px
+    @media (max-width: 376.98px)
+        padding: 32px 10px
+
+    &__status-clock
+        display: flex
+        align-items: center
+        gap: 38px
+        font-weight: 400
+        font-size: 16px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 42px
+        @media (max-width: 350.98px)
+            flex-direction: column
+            gap: 8px
+            align-items: flex-start
+
+    &__time
+        padding-left: 32px
+        position: relative
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            width: 24px
+            height: 24px
+            background: url('../img/pay-3/i02.svg') no-repeat
+    &__deliv
+        padding-left: 32px
+        position: relative
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            width: 24px
+            height: 24px
+            background: url('../img/pay-3/i03.svg') no-repeat
+
+    &__prod-info-block
+        margin-bottom: 23px
+
+    &__prod-name
+        font-weight: 400
+        font-size: 20px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #333333
+
+    &__prod-price
+        font-weight: 400
+        font-size: 16px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #777777
+
+    &__prod-info-price
+        display: grid
+        grid-template-columns: auto 1fr
+        column-gap: 60px
+        padding-bottom: 24px
+        border-bottom: 1px solid #999999
+        margin-bottom: 16px
+        @media (max-width: 376.98px)
+            column-gap: 15px
+
+    &__prices
+        font-weight: 500
+        font-size: 24px
+        line-height: 48px
+        letter-spacing: 0.03em
+        color: #333333
+        @media (max-width: 464.98px)
+            font-size: 19px
+            line-height: 42px
+
+    &__grand-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 24px
+        border-bottom: 1px solid #999999
+        margin-bottom: 16px
+        @media (max-width: 588.98px)
+            flex-direction: column
+
+    &__grand-title
+        font-weight: 500
+        font-size: 24px
+        line-height: 60px
+        letter-spacing: 0.03em
+        color: #333333
+
+    &__grand-price
+        font-weight: 500
+        font-size: 36px
+        line-height: 60px
+        letter-spacing: 0.03em
+        color: #333333
+
+    &__shipping-address
+        display: flex
+        align-items: flex-start
+        gap: 32px
+        font-weight: 400
+        font-size: 20px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #333333
+        @media (max-width: 588.98px)
+            flex-direction: column
+        @media (max-width: 376.98px)
+            gap: 10px
+
+    &__shipping-address-title
+        flex: 1 0 auto
+
+    &__shipping-address-info

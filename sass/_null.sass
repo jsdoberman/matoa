@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+/* :focus, :active
+ outline: none               - обводка элементов при нажатии таба*/
+
+html, body
+    font-family: 'Taviraj', sans-serif
+    height: 100%
+    margin: 0
+    padding: 0
+    overflow: auto
+    background: #E5E5E5
+
+ul, li
+    list-style: none
+    padding-left: 0
+    padding: 0
+    margin: 0
+
+h1, h2, h3, h4, h5, h6
+    padding: 0
+    margin: 0
+
+img
+    vertical-align: top
+
+a
+    text-decoration: none
+
+button
+    border: none
+    cursor: pointer
+    padding: 0
+
+.wrapper
+    position: relative
+    min-height: 100%
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    > main
+        flex: 1 1 auto
+
+[class*="__container"]
+    max-width: 1120px
+    padding: 0 5px
+    margin: 0 auto
+
+$tablet: 991.98px // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px // Телефоны L
+$mobileSmall: 479.98px // Телефоны S
+
+$main-color: #D84727

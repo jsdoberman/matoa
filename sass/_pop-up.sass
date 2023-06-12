@@ -1,0 +1,277 @@
+
+.cart-pop
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.4)
+    z-index: 1000
+    overflow: auto
+    opacity: 0
+    visibility: hidden
+    transition: all 0.2s
+    transform: translateY(-90px)
+
+    &_show
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+
+    &__window
+        border: 2px solid red
+        position: absolute
+        display: block
+        margin-bottom: 30px
+        top: 70px
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        max-width: 990px
+        min-height: 400px
+        background: #F7F6F4
+        padding: 32px 32px 40px 32px
+        z-index: 1001
+
+    &__wrapper-checkout-block
+        margin-top: 35px
+
+    &__info-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 26px
+
+    &__promo-block
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+    &__kode-promo-title
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-right: 32px
+
+    &__input-block
+        margin-right: 16px
+        input
+            width: 255px
+            height: 42px
+            background: #FFFFFF
+            border: 0.3px solid #333333
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0.02em
+            color: #333333
+            padding: 9px 16px
+
+    &__type-of-sale
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.02em
+        color: #01522D
+
+    &__total-block
+        display: flex
+        align-items: center
+        gap: 32px
+
+    &__total-title
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.02em
+        color: #333333
+
+    &__wrapper-total
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 4px
+
+    &__total-old-price
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.02em
+        color: #777777
+        position: relative
+        padding: 0 3px
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 0
+            width: 100%
+            height: 1px
+            background: #D93F3F
+
+    &__total-price
+        font-weight: 600
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #333333
+
+    &__btn-checkout
+        widows: 100%
+        height: 68px
+        background: #D84727
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 600
+        font-size: 24px
+        line-height: 24px
+        letter-spacing: 0.02em
+        color: #FFFFFF
+        transition: all 0.3s
+        &:hover
+            background: #F1DDC9
+            color: #D84727
+            border: 1px solid #D84727
+
+.product-section
+    display: flex
+    gap: 32px
+    padding-bottom: 40px
+    border-bottom: 0.3px solid #999999
+    &:not(:first-child)
+        padding-top: 40px
+
+    &__img
+        flex: 0 0 144px
+        height: 144px
+        background: #F1DDC9
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__info
+        flex: 0 1 100%
+
+    &__name
+        margin-bottom: 2px
+        a
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0.02em
+            color: #333333
+
+    &__old-price
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.02em
+        color: #777777
+        padding: 0 3px
+        position: relative
+        display: inline-block
+        span
+            margin-left: 3px
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 0
+            height: 1px
+            width: 100%
+            background: #D93F3F
+
+    &__price
+        font-weight: 600
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-bottom: 10px
+
+    &__custom-mess
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: #555555
+        margin-bottom: 4px
+
+    &__custom-info-mess
+        font-weight: 300
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: #555555
+
+    &__pay-block
+        flex: 1 0 auto
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+
+    &__select-packaging
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: #333333
+        margin-bottom: 8px
+
+    &__packaging
+        height: 42px
+        width: 313px
+        margin-bottom: 36px
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: #999999
+        padding: 0 10px
+
+        option
+            height: 30px
+    &__pay-block-btns
+        display: flex
+        align-items: center
+
+    &__sum-to-pay
+        font-weight: 600
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.02em
+        color: #333333
+        margin-right: 32px
+
+    &__btn-remove
+        cursor: pointer
+        width: 36px
+        height: 36px
+        border: 1px solid #D93F3F
+        display: flex
+        justify-content: center
+        align-items: center
+
+.cart-pop .count-product
+    margin-right: 16px
+
+    &__btn-minus
+        width: 30px
+        height: 30px
+
+    &__number
+        font-weight: 400
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.03em
+        color: #000000
+
+    &__btn-plus
+        width: 30px
+        height: 30px
